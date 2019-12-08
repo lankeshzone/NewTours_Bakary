@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Basics" thread-count="5" parallel ="classes">
+  <test thread-count="5" name="Test">
+  
+  <groups>
+  <run>
+  <include name="regression"/>
+  </run>
+  </groups>
+  
+  <classes>
+  <class name="BaseTests.HomePageTests"></class>
+  <class name="BaseTests.RegistrationTests"></class>
+    <class name="BaseTests.Sample"></class>
+  </classes>
+  
+  </test> <!-- Test -->
+</suite> <!-- Basics -->
