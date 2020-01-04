@@ -37,7 +37,7 @@ public class TestListener extends TestListenerAdapter
 	{
 		
 		String filePath = "D://Test//" + tr.getTestName()+tr.getEndMillis() +".png";
-		//HomePageTests.spo.captureImage(filePath);
+		HomePageTests.spo.captureImage(filePath);
 		
 	}
 	
@@ -57,7 +57,7 @@ public class TestListener extends TestListenerAdapter
 	public void onTestSuccess(ITestResult tr)
 	{
 		String filePath = "D://Test//" + tr.getTestName()+tr.getEndMillis() +".png"; 
-		//Screenshot.captureImage(filePath);
+		HomePageTests.spo.captureImage(filePath);
 	}
 	
 }

@@ -24,7 +24,7 @@ public class HomePageTests
 		driver = new ChromeDriver();
 		
 		driver.get("http://newtours.demoaut.com/mercurywelcome.php");
-		
+		spo = new Screenshot(driver);
 		hpo = new HomePage(driver);
 		login();
 		verifylinks();
@@ -34,17 +34,15 @@ public class HomePageTests
 	@Test(groups= {"regression"})
 	public static void login()
 	{
-		spo = new Screenshot(driver);
 		hpo.username_enter();
 		hpo.password_enter();
 		hpo.signon_click();
-	//	spo.captureImage("D://Test//login1234.png");
+		
 	}
 
 	@Test(groups= {"sanity"})
 	public static void verifylinks()
 	{
-		spo = new Screenshot(driver);
 		SideMenu spo = new SideMenu(driver);
 		spo.home_click();
 		hpo.destination_click();

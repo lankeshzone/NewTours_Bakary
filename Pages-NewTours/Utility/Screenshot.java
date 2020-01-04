@@ -15,7 +15,7 @@ public class Screenshot
 	
 	public Screenshot(WebDriver driver)
 	{
-		driver = this.driver;
+		this.driver = driver;
 	}
 	
 	public void captureImage(String filePath)
