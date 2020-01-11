@@ -6,8 +6,6 @@
  
   
  <classes>
-  <class name="BaseTests.TestOne"></class>
-  <class name="BaseTests.TestTwo"></class>
   <class name="BaseTests.HomePageTests"></class>
   <class name="BaseTests.RegistrationTests"></class>
   </classes>

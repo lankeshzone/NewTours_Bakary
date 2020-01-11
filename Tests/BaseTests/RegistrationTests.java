@@ -4,19 +4,24 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import BasePage.TopMenu;
 import Ragistration.RegistrationPage;
+import Utility.Screenshot;
 
+@Listeners(Utility.TestListener.class)
 public class RegistrationTests 
 {
+	
+	static Screenshot spo;
 
 	@Test(groups = {"regression","sanity"})
 	public void Register_User()
 	{
 		WebDriver driver = new ChromeDriver(); // created the browser instance
-		
+		spo= new Screenshot(driver);
 		//opening the base url
 		driver.get("http://newtours.demoaut.com");
 		

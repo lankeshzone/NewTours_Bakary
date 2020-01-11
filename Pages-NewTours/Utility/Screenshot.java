@@ -18,7 +18,7 @@ public class Screenshot
 		this.driver = driver;
 	}
 	
-	public void captureImage(String filePath)
+	public static void captureImage(String filePath)
 	{
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		System.out.println("test url" + driver.getCurrentUrl());

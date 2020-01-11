@@ -36,8 +36,8 @@ public class TestListener extends TestListenerAdapter
 	public void onTestFailure(ITestResult tr)
 	{
 		
-		String filePath = "D://Test//" + tr.getTestName()+tr.getEndMillis() +".png";
-		HomePageTests.spo.captureImage(filePath);
+		String filePath = "D://Test//snapshots//" + tr.getTestName()+tr.getEndMillis() +".png";
+		Screenshot.captureImage(filePath);
 		
 	}
 	
@@ -56,8 +56,8 @@ public class TestListener extends TestListenerAdapter
 	//Whenever a Particular TestNG Method Passed the execution
 	public void onTestSuccess(ITestResult tr)
 	{
-		String filePath = "D://Test//" + tr.getTestName()+tr.getEndMillis() +".png"; 
-		HomePageTests.spo.captureImage(filePath);
+		String filePath = "D://Test//snapshots//" + tr.getTestName()+tr.getEndMillis() +".png"; 
+		Screenshot.captureImage(filePath);
 	}
 	
 }
