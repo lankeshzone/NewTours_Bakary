@@ -8,7 +8,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import BasePage.TopMenu;
-import Ragistration.RegistrationPage;
+import Registration.RegistrationPage;
 import Utility.Screenshot;
 
 @Listeners(Utility.TestListener.class)

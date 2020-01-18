@@ -3,7 +3,7 @@
  * Date 24th Nov 2019
  */
 
-package Ragistration;
+package Registration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
