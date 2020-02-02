@@ -1,8 +1,16 @@
 package BaseTests;
 
+import java.net.MalformedURLException;
+
+import java.net.URL;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -18,9 +26,25 @@ public class RegistrationTests
 	static Screenshot spo;
 
 	@Test(groups = {"regression","sanity"})
-	public void Register_User()
+	public void Register_User() throws MalformedURLException
 	{
-		WebDriver driver = new ChromeDriver(); // created the browser instance
+		System.out.println("inside Test");
+		URL u = new URL("http://172.20.10.4:4444/wd/hub");
+		System.out.println("inside Test 2");
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setBrowserName("chrome");
+		cap.setPlatform(Platform.WINDOWS);
+		System.out.println("inside Test 3");
+		
+		ChromeOptions opt = new ChromeOptions();
+		opt.addArguments("headless");
+		opt.addArguments("window-size=1200x600");
+		
+		WebDriver driver = new ChromeDriver(opt);
+		
+		System.out.println("inside Test 4");
+		
+		//WebDriver driver = new ChromeDriver(); // created the browser instance
 		spo= new Screenshot(driver);
 		//opening the base url
 		driver.get("http://newtours.demoaut.com");
